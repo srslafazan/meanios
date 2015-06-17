@@ -15,6 +15,7 @@
 		261CB0DF1B31F55D0056281F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261CB0DD1B31F55D0056281F /* LaunchScreen.xib */; };
 		261CB0EB1B31F55D0056281F /* iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261CB0EA1B31F55D0056281F /* iosTests.swift */; };
 		261CB0F51B31F6390056281F /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261CB0F41B31F6390056281F /* Friend.swift */; };
+		261CB0F71B3213200056281F /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261CB0F61B3213200056281F /* FriendCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		261CB0E91B31F55D0056281F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		261CB0EA1B31F55D0056281F /* iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosTests.swift; sourceTree = "<group>"; };
 		261CB0F41B31F6390056281F /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Friend.swift; path = ../Friend.swift; sourceTree = "<group>"; };
+		261CB0F61B3213200056281F /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				261CB0F41B31F6390056281F /* Friend.swift */,
+				261CB0F61B3213200056281F /* FriendCell.swift */,
 				261CB0D11B31F55D0056281F /* AppDelegate.swift */,
 				261CB0D61B31F55D0056281F /* ViewController.swift */,
 				261CB0D81B31F55D0056281F /* Main.storyboard */,
@@ -222,6 +225,7 @@
 				261CB0D21B31F55D0056281F /* AppDelegate.swift in Sources */,
 				261CB0D51B31F55D0056281F /* ios.xcdatamodeld in Sources */,
 				261CB0F51B31F6390056281F /* Friend.swift in Sources */,
+				261CB0F71B3213200056281F /* FriendCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +423,7 @@
 				261CB0F01B31F55D0056281F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		261CB0F11B31F55D0056281F /* Build configuration list for PBXNativeTarget "iosTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +432,7 @@
 				261CB0F31B31F55D0056281F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
