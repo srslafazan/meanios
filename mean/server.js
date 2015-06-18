@@ -5,6 +5,8 @@ var app = express();
 var bodyParser = require('body-parser');
 // we have to use the json version since we are posting json data
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+
 app.use(express.static(path.join(__dirname, './client')));
 require('./config/mongoose.js');
 require('./config/routes.js')(app);

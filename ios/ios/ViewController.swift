@@ -13,22 +13,27 @@ class ViewController: UITableViewController, UITableViewDataSource {
     var friends = [Friend]()
     
     override func viewDidLoad() {
-        println("hi")
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
 
         if let urlToReq = NSURL(string: "http://192.168.1.125:8000/friends") {
+
             if let data = NSData(contentsOfURL: urlToReq) {
                 let arrOfFriends = parseJSON(data)
-
+                println(1)
+                print(arrOfFriends)
                 for friend in arrOfFriends {
-                    let object = friend as! NSDictionary
                     
-                    let friendName = object["name"] as! String
-                    let friendAge = object["age"] as! Int
-                    
-                    let friend = Friend(name: friendName, age: friendAge)
-                    friends.append(friend)
+                    if let object = friend as? NSDictionary {
+                        if let friendName = object["name"] as? String {
+                            if let friendAge = object["age"] as? Int {
+                                let friend = Friend(name: friendName, age: friendAge)
+                                println(friend)
+                                friends.append(friend)
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -36,14 +41,16 @@ class ViewController: UITableViewController, UITableViewDataSource {
     
     func parseJSON(inputData: NSData) -> NSArray {
         var error: NSError?
+                        println(3)
         var arrOfObjects = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSArray
-        println(arrOfObjects)
         return arrOfObjects
     }
 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+                        println(4)
         return friends.count
+
     }
     
 
@@ -56,7 +63,7 @@ class ViewController: UITableViewController, UITableViewDataSource {
             
             cell.friendName.text = friend.friendName
             cell.friendAge.text = String(stringInterpolationSegment: friend.friendAge)
-        
+                        println(5)
             return cell
 
     }
@@ -69,4 +76,3 @@ class ViewController: UITableViewController, UITableViewDataSource {
 
 
 }
-
